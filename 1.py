@@ -3,7 +3,7 @@ import pandas as pd
 import asyncio
 import aiohttp
 import numpy as np
-
+import time
 # URL API
 url = "https://api.hh.ru/vacancies"
 professional_roles = ["116", "160", "114", "112"]
@@ -19,7 +19,7 @@ async def fetch_vacancies():
         for p in range(100):  # Количество страниц
             params = {
                 "professional_role": professional_roles,
-                "area": 1,
+                "area": 113,
                 "per_page": 100,  # Увеличение количества вакансий на странице
                 "page": p
             }
@@ -31,6 +31,7 @@ def process_data(data):
     for page_data in data:
         if "items" in page_data:
             for vacancy in page_data["items"]:
+                
                 salary = vacancy.get("salary")
                 if salary:
                     salary_from = salary.get("from")
@@ -46,7 +47,9 @@ def process_data(data):
                     "Обязаности": vacancy['snippet']['responsibility'],
                     "Зарплата": salary_str,
                     "Опыт работы": vacancy["experience"]["name"],
-                    "Ссылка": vacancy['alternate_url']
+                    "Ссылка": vacancy['alternate_url'],
+                    "ID": vacancy['id']
+                   
                 })
 
 data = asyncio.run(fetch_vacancies())
@@ -72,6 +75,7 @@ df['Требования'] = df['Требования'].apply(remove_last_ellips
 
 # Выведем первые строки для анализа структуры данных
 # Выводим таблицу
+
 
 df.to_csv("dt.csv", index=False)
 df.to_excel("dt.xlsx", index=False)

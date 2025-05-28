@@ -1,0 +1,12 @@
+[5/28/2025, 10:06:57 PM] info: Logging was started to file.
+[5/28/2025, 10:06:57 PM] info: Start application inspector initialization
+[5/28/2025, 10:06:57 PM] info: Hide developer mode UI
+[5/28/2025, 10:06:57 PM] info: Infrastructure Configurations: {"port":8000,"infrastructureAssemblyFolderPath":"C:\\Users\\adm\\AppData\\Local\\Application Inspector Analyzer","applicationResourcesFolderPath":"C:\\Users\\adm\\AppData\\Local\\Application Inspector Analyzer","scanTargetFolderPath":"d:\\GitHub\\Analysis-Practice","isDebugging":false,"logLevel":{"i2_1":"Error","j2_1":5,"type":5,"key":"Settings.LogLevel.Error.Text"},"logDir":"d:\\GitHub\\Analysis-Practice\\.ai\\Logs\\Infrastructure\\2025-05-28-22-06-57","tipsFoundNotificationThreshold":15,"similarIssuesFoundNotificationThreshold":15,"applicationLocalDataFolderPath":"d:\\GitHub\\Analysis-Practice\\.ai"}
+[5/28/2025, 10:06:57 PM] info: Start infrastructure initialization
+[5/28/2025, 10:06:58 PM] info: Infrastructure was started
+[5/28/2025, 10:07:09 PM] info: Initialize aie integration isn't initialized
+[5/28/2025, 10:07:09 PM] info: Infrastructure was initialized
+[5/28/2025, 10:07:09 PM] info: Infrastructure Installer was deleted
+[5/28/2025, 10:07:09 PM] info: Clean up logs files was started
+[5/28/2025, 10:07:09 PM] info: Clean up logs files was finished
+[5/28/2025, 10:07:11 PM] info: Project was created. Id: b0e1a58e-2e45-4337-98a6-12ae1c57a935
